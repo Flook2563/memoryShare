@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memories</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/Memories.css">
+  <link rel="stylesheet" href="css/setForm.css">
+</head>
+<body">
+<%- include('navbar') %>
+<div class="body-form">
+  <form action="/auth/save_memory" method="post">
+    <div class="row my-3">
+      <div class="">
+      <h3 id="txt_form">Add Memories</h3>
+      <div class="form-group">
+        <label class="control-label" id="txt_form">Title</label>
+        <div class="">
+          <input type="text" class="form-control" name="title" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2">Details</label>
+          <div class="">
+              <textarea class="form-control" cols="30" rows="4" name="detail" name="description" autocomplete="off"></textarea>
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label class="control-label">Writer</label>
+          <div class="">
+            <input type="text" class="form-control" name="writer" autocomplete="off" readonly value="<%= username %>">
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label class="control-label">Share Memories</label>
+          <div class="">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="YES" />
+              <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+            
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="NO" />
+              <label class="form-check-label" for="inlineRadio2">No</label>
+            </div>
+            
+          </div>
+      </div>
+    </br>
+        <div class="">
+          <button type="submit" class="form-control  btn btn-primary">บันทึก</button>
+        </div>
+      </div>
+    </div>
+    </div>
+      
+    </form>
+</div>
+</body>
+</html>

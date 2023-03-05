@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <%- include('bg') %>
+    <div class="body-form">
+      <form action="/auth/register" method="post">
+            <h3 id="txt_form">Register</h3>
+            <div class="mb-3">
+              <label for="" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password"autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Comfirm Password</label>
+              <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Comfirm Password"autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">e-mail</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="e-mail"autocomplete="off" required>
+            </div>
+            <button type="submit" class="form-control  btn btn-primary">Register</button>
+            <a href="/">
+                <button type="button" class="form-control  btn btn-danger">Back</button>
+            </a>
+          </form>
+    </div>
+</body>
+</html>
